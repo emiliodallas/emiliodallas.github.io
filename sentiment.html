@@ -17,6 +17,7 @@
 			<div id="wrapper">
 
 				<!-- Header -->
+				</style>
 					<header id="header">
 						<div class="inner">
 
@@ -42,24 +43,29 @@
 							<li><a href="about.html">About me</a></li>
 							<li><a href="sentiment.html">Sentiment Analysis</a></li>
 							<li><a href="prf.html">FeeMyPet</a></li>
+							<li><a href="processing.html">Image Processing</a></li>
 						</ul>
 					</nav>
-
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Youtube Sentiment Analysis</h1>
-							<span class="image main"><img src="images/streamlit.png" alt="" /></span>
-							
-							<p>This project utilizes various technologies and libraries to provide powerful functionalities. Below is an overview of the components used:</p>
+							<h1>Youtube Sentiment Analysis</h1>	
+								<p>This project allows the user to input a YouTube channel name and get a sentiment analysis about the channel's recent comments. It uses YouTube's API to retrieve the top comments from the last 10 videos on the specified channel.</p>
+								<p>And then it generates a bar graph about the polarity of the comments. They can be neutral, positive or negative.</p>
+								<span class="image main"><img src="images/p3.png" alt="" /></span>	
+								<p>A word cloud with the words most frequently used in the comments.</p>
+								<span class="image main"><img src="images/p4.png" alt="" /></span>	
+								<p>And the original dataframe with all the comments and their respective polarity, subjectivity and classifications.</p>
+								<span class="image main"><img src="images/p2.png" alt="" /></span>	
+							</ul>
 
 							<h2>Technologies Used:</h2>
 							<ul>
-								<li>YouTube API: Integrated the YouTube API to retrieve channel information, video data, and comments from YouTube. This involved authenticating the API requests and handling the API responses.</li>
-								<li>Streamlit: Utilized Streamlit, a web application framework, to create an interactive dashboard for the sentiment analysis tool. Developed user interface components, such as text inputs, buttons, and data visualizations, to enhance user experience.</li>
-								<li>Flask: Implemented a backend API using Flask, a micro web framework, to handle data processing tasks. The API received requests from the frontend, processed the data using TextBlob for sentiment analysis, and returned the results to the frontend.</li>
-								<li>Docker: Employed Docker for containerization, enabling easy deployment and scalability of the application. Created Docker images for the frontend, backend, and data processing components, allowing them to run independently and communicate with each other through defined interfaces.</li>
-								<li>TextBlob: Utilized the TextBlob library, a powerful NLP tool in Python, for sentiment analysis of the extracted comments. Performed sentiment classification on the comments to determine their polarity (positive, negative, or neutral) and subjectivity.</li>
+								<li><b>YouTube API:</b> Integrated the YouTube API to retrieve channel information, video data, and comments from YouTube. This involved authenticating the API requests and handling the API responses.</li>
+								<li><b>Streamlit:</b> Utilized Streamlit, a web application framework, to create an interactive dashboard for the sentiment analysis tool. Developed user interface components, such as text inputs, buttons, and data visualizations, to enhance user experience.</li>
+								<li><b>Flask:</b> Implemented a backend API using Flask, a micro web framework, to handle data processing tasks. The API received requests from the frontend, processed the data using TextBlob for sentiment analysis, and returned the results to the frontend.</li>
+								<li><b>Docker:</b> Employed Docker for containerization, enabling easy deployment and scalability of the application. Created Docker images for the frontend, backend, and data processing components, allowing them to run independently and communicate with each other through defined interfaces.</li>
+								<li><b>TextBlob:</b> Utilized the TextBlob library, a powerful NLP tool in Python, for sentiment analysis of the extracted comments. Performed sentiment classification on the comments to determine their polarity (positive, negative, or neutral) and subjectivity.</li>
 							</ul>
 							<h2>Functionalities:</h2>
 							<p>The project offers the following functionalities:</p>
@@ -68,7 +74,7 @@
 								<li>Extract comments from the videos and perform sentiment analysis using TextBlob.</li>
 								<li>Generate visualizations, such as word clouds and sentiment charts, to analyze the sentiment of the comments.</li>
 								<li>Display a data frame with the extracted comments for further analysis.</li>
-							</ul>							
+							</ul>		
 						</div>
 					</div>
 
