@@ -50,15 +50,74 @@
 					<div id="main">
 						<div class="inner">
 							<h1>FeedMyPet</h1>
-							<span class="image main"><img src="images/fmp2.png" alt="" /></span>
-							
-							<p>During the 2020 pandemic, with people spending more time at home, there was an increase in pet ownership in Brazil. As travel restrictions eased, the need arose to remotely care for pets. To address this, the project aimed to develop an automatic pet feeder with water and food reservoirs, controlled through a native mobile app. Users could register an account, set feeding schedules, and portions for their pets. The project encompassed mechanical design, hardware, firmware, and software development, incorporating 3D printing, MDF material, PCB, ADC module, motor control, water pump activation, Raspberry Pi Zero W, React Native framework for the mobile app, Node.js Express framework for the server, and MongoDB as the database. The final product achieved functionality and demonstrated cost-effectiveness and interdisciplinary learning.</p>
+							<h2>
+							<style>
+								.image-container {
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									max-width: 400px;
+									max-height: 300px;
+									margin-bottom: 70px;
+								}
+								
+								.image-container img {
+									max-width: 100%;
+									max-height: 100%;
+								}
+							</style>
+								
+							</h2>							
+							<style>
+								.video-container {
+								  float: left;
+								  width: 50%;
+								  margin-right: 20px;
+								}
+							  
+								.text-container {
+								  overflow: hidden; /* Clear the float */
+								}
+							  </style>
+							  
+							  <div class="text-container">
+								<div class="video-container">
+								  <video width="400" height="600" controls>
+									<source src="images/feedmypet-shortvideo-vertical.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								  </video>
+								</div>
+								<div>
+									<p>As the video shows, this project encompassed a complete IoT solution, from hardware design and manufacturing to firmware and software development. </p>									
+									<p>Using a mobile app, the client could set up and account, set up its pets and configure how much food and how many times a day it was served and the exacly hour and minute.</p>
+									<p>It was possible to see if the food and water bowls were empty or how much was left in them.</p>
+									<p>If there were more than one module in the house, it was possible to control it through the same app.</p>
+								</div>
+							  </div>
+							  <p> </p>
+							<h2>Overview</h2>
+								<h3>Physical</h3>
+								<p><span class="image right"><img src="images/t.jpeg" alt="" /></span><li>This picture is the project in its final form. It was made in MDF and you can check the food and water containers on top of it.</li></p>
+								<p><li>The water is served with a DC motor, where it will fill the cup full. This is done by measuring if current value is within minimum and maximum limits.</li></p>
+								<p><li>For the food, it was used a stepper motor so the amount of food dispensed was the exact amount the client needed it to be.</li></p>
+								<p><li>The recipient was projected using Autocad and it was made so the food and water bowls were kept 5cm above the floor for good ergonomics and the animal still had space so it wouldn't hit his head.</li></p>
+								<p><li>It could be injected in ABS plastic to reduce price at large scale.</li></p>
+								<h3>Electrical</h3>
+								<p><span class="image left"><img src="images/scheme.jpeg" alt="" /></span><li>This shows the electrical scheme with all the components and trails to connect each one of them.</li></p>	
+								<p><li>They were made using the EasyEAD software, which is a tool to develop and print PCB's.</li></p>
+								<p><li>The module was tested utilizing the burn-in method, which puts the PCB under extreme operating conditions, to guarantee it would not leave the pet unnatended.</li></p>
+							  	<p><li>The Raspberry Pi Zero W could be replaced by ESP32 to reduce costs.</li></p>
 							<h2>Technologies Used:</h2>
 							<ul>
-								<li><b>Python:</b> Employed for various aspects of the project, including web scraping and data manipulation for obtaining pet-related information, as well as implementing machine learning algorithms for personalized recommendations.</li>
-								<li><b>React Native:</b> Developed the native mobile app for the automatic pet feeder using React Native, enabling users to register accounts, set feeding schedules, and control the device remotely through an intuitive and responsive user interface.</li>
-								<li><b>Node.js:</b> Developed the server-side components of the project using Node.js and Express.js, handling API requests, data processing, and communication with the MongoDB database.</li>
-								<li><b>MongoDB:</b> Utilized MongoDB as the database system to store and manage user account information, feeding schedules, and other relevant data in the automatic pet feeder project.</li>
+								<li><b>React Native:</b> Developed the native mobile app using React Native, allowing cross-platform compatibility for both Android and iOS devices.</li>
+								<li><b>Node.js Express:</b> Implemented the server-side using Node.js Express framework, handling API requests, and managing data flow between the mobile app and the Raspberry Pi.</li>
+								<li><b>MongoDB:</b> Created and hosted a non-relational database using MongoDB Atlas, storing and retrieving data related to user accounts, pet feeding schedules, and device configurations.</li>
+								<li><b>Raspberry Pi Zero W:</b> Utilized the Raspberry Pi Zero W as the hardware platform to control the pet feeder, executing the Python program to interact with actuators and sensors.</li>
+								<li><b>Linux:</b> Utilized the Linux operating system on the Raspberry Pi, executing the Python program at scheduled intervals for the automation of pet feeding tasks.</li>
+								<li><b>Websocket:</b> Implemented websocket communication to establish real-time interaction between the mobile app and the Raspberry Pi, enabling instant updates and notifications.</li>
+								<li><b>Heroku:</b> Deployed the server-side application on Heroku, providing a scalable and reliable hosting solution for the backend services.</li>
+								<li><b>Expo:</b> Leveraged Expo as a development tool to simulate and export the React Native app, simplifying the testing and deployment process.</li>
+								<li><b>EasyEDA:</b> Software used to make the electric scheme, where you select the components and connect them in the board.</li>
 							</ul>
 							<h2>Functionalities:</h2>
 							<p>The project offers the following functionalities:</p>
@@ -71,6 +130,7 @@
 							</ul>							
 						</div>
 					</div>
+				
 
 				<!-- Footer -->
 					<footer id="footer">
