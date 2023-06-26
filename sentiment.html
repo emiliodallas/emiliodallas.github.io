@@ -43,7 +43,7 @@
 							<li><a href="about.html">About me</a></li>
 							<li><a href="sentiment.html">Sentiment Analysis</a></li>
 							<li><a href="prf.html">FeeMyPet</a></li>
-							<li><a href="processing.html">Image Processing</a></li>
+							<li><a href="processing.html">Optical Mark Recognition System</a></li>
 						</ul>
 					</nav>
 				<!-- Main -->
@@ -51,8 +51,8 @@
 						<div class="inner">
 							<h1>Youtube Sentiment Analysis</h1>	
 							<ul>
-								<p>This project allows the user to input a YouTube channel name and get a sentiment analysis about the channel's recent comments. It uses YouTube's API to retrieve the top comments from the last 10 videos on the specified channel and make an analysis on top of that.</p>
-								<h2>Overview</h2>
+								<p>This project allows the user to input a YouTube channel name and get a sentiment analysis about the channel's recent comments. It uses YouTube's API to retrieve the top comments from the last 10 videos on the specified channel and make an analysis on top of that:</p>
+								<span class="image main"><img src="images/p1.png" alt="" /></span>	
 								<p><li>One of its functionalities is to generate a bar graph about the polarity of the comments. They can be neutral, positive or negative:</li></p>
 								<span class="image main"><img src="images/p3.png" alt="" /></span>	
 								<p><li>Another thing is to create a word cloud with the words most frequently used in the comments. Common words that don't generate sentiment or can't be used in the analysis are not taken into consideration. The word cloud looks like:</li></p>
@@ -68,15 +68,7 @@
 								<li><b>Flask:</b> Implemented a backend API using Flask, a micro web framework, to handle data processing tasks. The API received requests from the frontend, processed the data using TextBlob for sentiment analysis, and returned the results to the frontend.</li>
 								<li><b>Docker:</b> Employed Docker for containerization, enabling easy deployment and scalability of the application. Created Docker images for the frontend, backend, and data processing components, allowing them to run independently and communicate with each other through defined interfaces.</li>
 								<li><b>TextBlob:</b> Utilized the TextBlob library, a powerful NLP tool in Python, for sentiment analysis of the extracted comments. Performed sentiment classification on the comments to determine their polarity (positive, negative, or neutral) and subjectivity.</li>
-							</ul>
-							<h2>Functionalities:</h2>
-							<p>The project offers the following functionalities:</p>
-							<ul>
-								<li>Retrieve channel information and latest videos from YouTube using the YouTube API.</li>
-								<li>Extract comments from the videos and perform sentiment analysis using TextBlob.</li>
-								<li>Generate visualizations, such as word clouds and sentiment charts, to analyze the sentiment of the comments.</li>
-								<li>Display a data frame with the extracted comments for further analysis.</li>
-							</ul>		
+							</ul>								
 						</div>
 					</div>
 

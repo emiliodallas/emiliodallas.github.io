@@ -42,33 +42,37 @@
 							<li><a href="about.html">About me</a></li>
 							<li><a href="sentiment.html">Sentiment Analysis</a></li>
 							<li><a href="prf.html">FeeMyPet</a></li>
-							<li><a href="processing.html">Image Processing</a></li>
+							<li><a href="processing.html">Optical Mark Recognition System</a></li>
 						</ul>
 					</nav>
 
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Image Processing</h1>
+							<h1>Optical Mark Recognition System</h1>
 							<span class="image main"><img src="images/prova-multipla-escolha.jpg" alt="" /></span>
 							
-							<p>In order to help a professor correct his multiple-choice tests, I created a program that analysis the student tests and compares to the teachers correct template, for multiple different tests he applied in the same classes.</p>
-							<h2>Technologies Used:</h2>
-							<ul>
-								<li><b>Python:</b> Employed for various aspects of the project, including web scraping and data manipulation for obtaining pet-related information, as well as implementing machine learning algorithms for personalized recommendations.</li>
-								<li><b>React Native:</b> Developed the native mobile app for the automatic pet feeder using React Native, enabling users to register accounts, set feeding schedules, and control the device remotely through an intuitive and responsive user interface.</li>
-								<li><b>Node.js:</b> Developed the server-side components of the project using Node.js and Express.js, handling API requests, data processing, and communication with the MongoDB database.</li>
-								<li><b>MongoDB:</b> Utilized MongoDB as the database system to store and manage user account information, feeding schedules, and other relevant data in the automatic pet feeder project.</li>
-							</ul>
-							<h2>Functionalities:</h2>
-							<p>The project offers the following functionalities:</p>
-							<ul>
-								<li>Developed an automatic pet feeder that allows users to set customized feeding schedules and portion sizes for their pets.</li>
-								<li>Integrated motor control to accurately dispense the appropriate amount of food at the designated times.</li>
-								<li>Implemented a water pump system to provide scheduled hydration for pets.</li>
-								<li>Incorporated advanced features such as web scraping and personalized recommendations to enhance the user experience.</li>
-								<li>Designed a user-friendly mobile app interface for convenient remote control and monitoring of the pet feeder.</li>
-							</ul>							
+							<p>This project implements an Optical Mark Recognition (OMR) system in Octave to correct multiple-choice answer sheets. Octave is a free software largely compatible with Matlab.</p>
+							<h2>Overview</h2>
+							<p><li>The implementation begins by loading the image, converting it to black and white, and displaying it.</li></p>
+							<div style="padding-top: 20px;">
+								<span class="image fit"><img src="images/1.jpeg" alt="" /></span>
+							</div>	
+							<p><li>Rectangles are then placed around each answer option on the answer sheet. The code removes the question types (A, B, C, D) from the main matrix and stores them in a separate vector.</li></p>
+							<p><li>Then, bubble sort is used to sort the question type boxes and answer boxes in the Y-axis to account for potential image rotation. The matrix is then sorted in rows, and the questions are sorted in ascending order. The number of black pixels in each answer option square is counted. Similarly, the answers are sorted by row.</li></p>
+							<div style="padding-top: 20px;">
+								<span class="image fit"><img src="images/2.jpeg" alt="" /></span>
+							</div>	
+							<p><li>The code checks which answer was selected based on the previously obtained values or if no answer was selected. Any question with two or more selected answers is marked as invalid. The marked question type is identified by the square with the highest number of black pixels.</li></p>
+							<p><li>The answer key is loaded based on the identified question type. The same procedure is applied to the answer key matrix as for the previous images. The student's answer matrix is compared with the answer key, and the score is calculated and displayed.</li></p>
+							<div style="padding-top: 20px;">
+								<span class="image fit"><img src="images/3.jpeg" alt="" /></span>
+							</div>	
+							
+							
+							
+							<h2>Results and Conclusion:</h2>
+							<p>The image recognition results show that all questions on the answer sheet, including the question type, are correctly recognized and the red rectangles are appropriately positioned. The command window displays the score and the number of questions with multiple answers, which were manually counted and verified to match the system's results.</p>				
 						</div>
 					</div>
 
