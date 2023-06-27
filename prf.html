@@ -59,6 +59,7 @@
 									max-width: 400px;
 									max-height: 300px;
 									margin-bottom: 70px;
+									margin-right: 20px;
 								}
 								
 								.image-container img {
@@ -70,13 +71,25 @@
 							</h2>							
 							<style>
 								.video-container {
-								  float: left;
-								  width: 50%;
-								  margin-right: 20px;
+								  width: 100%;
+								  margin-bottom: 20px;
 								}
 							  
 								.text-container {
 								  overflow: hidden; /* Clear the float */
+								}
+							  
+								@media screen and (min-width: 768px) {
+								  .video-container {
+									float: left;
+									width: 50%;
+									margin-right: 20px;
+								  }
+							  
+								  .text-container {
+									display: flex;
+									align-items: flex-start;
+								  }
 								}
 							  </style>
 							  
@@ -88,10 +101,10 @@
 								  </video>
 								</div>
 								<div>
-									<p>As the video shows, this project encompassed a complete IoT solution, from hardware design and manufacturing to firmware and software development. </p>									
-									<p>Using a mobile app, the client could set up and account, set up its pets and configure how much food and how many times a day it was served and the exacly hour and minute.</p>
-									<p>It was possible to see if the food and water bowls were empty or how much was left in them.</p>
-									<p>If there were more than one module in the house, it was possible to control it through the same app.</p>
+								  <p>As the video shows, this project encompassed a complete IoT solution, from hardware design and manufacturing to firmware and software development.</p>									
+								  <p>Using a mobile app, the client could set up an account, set up its pets, and configure the amount of food and the feeding schedule.</p>
+								  <p>It was possible to monitor the food and water levels in the bowls.</p>
+								  <p>If there were multiple modules in the house, they could be controlled through the same app.</p>
 								</div>
 							  </div>
 							  <p> </p>
