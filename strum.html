@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Optical Mark Recognition System</title>
+		<title>Strum</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -50,30 +50,31 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Optical Mark Recognition System</h1>
-							<span class="image main"><img src="images/prova-multipla-escolha.jpg" alt="" /></span>
+							<h1>Game Promotions</h1>
 							
-							<p>This project implements an Optical Mark Recognition (OMR) system in Octave to correct multiple-choice answer sheets. Octave is a free software largely compatible with Matlab.</p>
-							<h2>Overview</h2>
-							<p><li>The implementation begins by loading the image, converting it to black and white, and displaying it.</li></p>
-							<div style="padding-top: 20px;">
-								<span class="image fit"><img src="images/1.jpeg" alt="" /></span>
-							</div>	
-							<p><li>Rectangles are then placed around each answer option on the answer sheet. The code removes the question types (A, B, C, D) from the main matrix and stores them in a separate vector.</li></p>
-							<p><li>Then, bubble sort is used to sort the question type boxes and answer boxes in the Y-axis to account for potential image rotation. The matrix is then sorted in rows, and the questions are sorted in ascending order. The number of black pixels in each answer option square is counted. Similarly, the answers are sorted by row.</li></p>
-							<div style="padding-top: 20px;">
-								<span class="image fit"><img src="images/2.jpeg" alt="" /></span>
-							</div>	
-							<p><li>The code checks which answer was selected based on the previously obtained values or if no answer was selected. Any question with two or more selected answers is marked as invalid. The marked question type is identified by the square with the highest number of black pixels.</li></p>
-							<p><li>The answer key is loaded based on the identified question type. The same procedure is applied to the answer key matrix as for the previous images. The student's answer matrix is compared with the answer key, and the score is calculated and displayed.</li></p>
-							<div style="padding-top: 20px;">
-								<span class="image fit"><img src="images/3.jpeg" alt="" /></span>
-							</div>	
-							
-							
-							
-							<h2>Results and Conclusion:</h2>
-							<p>The image recognition results show that all questions on the answer sheet, including the question type, are correctly recognized and the red rectangles are appropriately positioned. The command window displays the score and the number of questions with multiple answers, which were manually counted and verified to match the system's results.</p>				
+							<p>This project uses a few API's from big video game stores to search and notificate the user if the any of the games on his wishlist are in promotion, for how much and in what store.</p>
+							<h2>Project Under Construction</h2>
+							<p><li>The user can search any game and all corresponding matches will appear, independently of what store. If he wants, he can add any game to his wishlist and be notified on his Telegram about discounts.</li></p>
+							<p><li>The cluster will be held on GKE and will utilize Github Actions as a CI/CD automator.</li></p>
+							<p><li>For now, the project is already streaming Steam and Epic Store data and working with Telegram bot messaging the user when a wishlist game enters in promotion.</li></p>
+							<p><li>Next Steps:</li></p>
+							<style>
+								/* CSS styles for the numbered list */
+								.numbered-list {
+								  list-style-type: upper-roman; /* Use decimal numbers for the list */
+								  padding-bottom: 10px;
+								  padding-left: 20px; /* Add some left padding to the list */
+								}
+							  </style>
+							  
+							  <ol class="numbered-list">
+								<li>Save data on a KSQLDB.</li>
+								<li>Host cluster on GKE.</li>
+								<li>Implement CI/CD control to update the cluster.</li>
+								<li>Expose KSQLDB metrics and use Prometheus/Grafana to plot historical data.</li>
+								<li>Implement front-end to be more acessible for the user.</li>
+								<li>Configure Telegram bot to receive game names and insert them in the wishlist through a menu.</li>
+							  </ol>
 						</div>
 					</div>
 
