@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Youtube Sentiment Analysis</title>
+		<title>AWS Infra</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -17,7 +17,6 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-				</style>
 					<header id="header">
 						<div class="inner">
 
@@ -49,29 +48,35 @@
 							<li><a href="opmr.html">Optical Mark Recognition System</a></li>
 						</ul>
 					</nav>
+
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Youtube Sentiment Analysis</h1>	
-							<ul>
-								<p>This project allows the user to input a YouTube channel name and get a sentiment analysis about the channel's recent comments. It uses YouTube's API to retrieve the top comments from the last 10 videos on the specified channel and make an analysis on top of that:</p>
-								<span class="image main"><img src="images/p1.png" alt="" /></span>	
-								<p><li>One of its functionalities is to generate a bar graph about the polarity of the comments. They can be neutral, positive or negative:</li></p>
-								<span class="image main"><img src="images/p3.png" alt="" /></span>	
-								<p><li>Another thing is to create a word cloud with the words most frequently used in the comments. Common words that don't generate sentiment or can't be used in the analysis are not taken into consideration. The word cloud looks like:</li></p>
-								<span class="image main"><img src="images/p4.png" alt="" /></span>	
-								<p><li>And the original dataframe with all the comments and their respective polarity, subjectivity and classifications:</li></p>
-								<span class="image main"><img src="images/p2.png" alt="" /></span>	
-							</ul>
-
-							<h2>Technologies Used:</h2>
-							<ul>
-								<li><b>YouTube API:</b> Integrated the YouTube API to retrieve channel information, video data, and comments from YouTube. This involved authenticating the API requests and handling the API responses.</li>
-								<li><b>Streamlit:</b> Utilized Streamlit, a web application framework, to create an interactive dashboard for the sentiment analysis tool. Developed user interface components, such as text inputs, buttons, and data visualizations, to enhance user experience.</li>
-								<li><b>Flask:</b> Implemented a backend API using Flask, a micro web framework, to handle data processing tasks. The API received requests from the frontend, processed the data using TextBlob for sentiment analysis, and returned the results to the frontend.</li>
-								<li><b>Docker:</b> Employed Docker for containerization, enabling easy deployment and scalability of the application. Created Docker images for the frontend, backend, and data processing components, allowing them to run independently and communicate with each other through defined interfaces.</li>
-								<li><b>TextBlob:</b> Utilized the TextBlob library, a powerful NLP tool in Python, for sentiment analysis of the extracted comments. Performed sentiment classification on the comments to determine their polarity (positive, negative, or neutral) and subjectivity.</li>
-							</ul>								
+							<h1>Game Promotions</h1>
+							
+							<p>This project uses a few API's from big video game stores to search and notificate the user if the any of the games on his wishlist are in promotion, for how much and in what store.</p>
+							<h2>Project Under Construction</h2>
+							<p><li>The user can search any game and all corresponding matches will appear, independently of what store. If he wants, he can add any game to his wishlist and be notified on his Telegram about discounts.</li></p>
+							<p><li>The cluster will be held on GKE and will utilize Github Actions as a CI/CD automator.</li></p>
+							<p><li>For now, the project is already streaming Steam and Epic Store data and working with Telegram bot messaging the user when a wishlist game enters in promotion.</li></p>
+							<p><li>Next Steps:</li></p>
+							<style>
+								/* CSS styles for the numbered list */
+								.numbered-list {
+								  list-style-type: upper-roman; /* Use decimal numbers for the list */
+								  padding-bottom: 10px;
+								  padding-left: 20px; /* Add some left padding to the list */
+								}
+							  </style>
+							  
+							  <ol class="numbered-list">
+								<li>Save data on a KSQLDB.</li>
+								<li>Host cluster on GKE.</li>
+								<li>Implement CI/CD control to update the cluster.</li>
+								<li>Expose KSQLDB metrics and use Prometheus/Grafana to plot historical data.</li>
+								<li>Implement front-end to be more acessible for the user.</li>
+								<li>Configure Telegram bot to receive game names and insert them in the wishlist through a menu.</li>
+							  </ol>
 						</div>
 					</div>
 
