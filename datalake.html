@@ -88,14 +88,9 @@
 							</style>
 							<ol class="numbered-list">
 
-							<p><li>Set connections to the datasources on AWS Glue.</li></p>
-							<p><li>Built crawlers to populate the AWS Glue Data Catalog with tables.</li></p>
-							<p><li>Used Apache Spark to create AWS Glue Jobs to extract the created tables and store as raw Avro data on a S3 bucket.</li></p>
-							<p><li>The raw data is then cleansed and refined to be sent to a S3 bucket as a Apache Parquet file.</li></p>
-							<li>This is done because Parquet is a compressed optimized format for analysis.</li>
-							<p><li>Utilized AWS Athena to aggregate this new data to create custom viewes.</li></p>
-							<p><li>In Athena, CTAS was used to write new data into a new partition on the S3 bucket.</li></p>
-							<p><li>In this process, a few tables were aggregated to create new viewes.</li></p>
+							<p><li>Created a bucket on Cloud Storage and uploaded the raw data as CSV.</li></p>
+							<p><li>Created the dataset and tables on BigQuery from the uploaded data.</li></p>
+							<p><li>Partitioned the tables creating new ones to get new views on the dataset.</li></p>
 							</ol>
 
 						</div>
