@@ -54,11 +54,17 @@
 						<div class="inner">
 							<h1>Game Promotions</h1>
 							
-							<p>This project uses a few API's from big video game stores to search and notificate the user if the any of the games on his wishlist are in promotion, for how much and in what store.</p>
+							<p>This project uses a few API's from big video game stores to search and notificate the user if the any of the games on his wishlist are in promotion, for how much and the discount.</p>
 							<h2>Project Under Construction</h2>
-							<p><li>The user can search any game and all corresponding matches will appear, independently of what store. If he wants, he can add any game to his wishlist and be notified on his Telegram about discounts.</li></p>
-							<p><li>The cluster will be held on GKE and will utilize Github Actions as a CI/CD automator.</li></p>
+							<p><li>The user can search any game and the corresponding matche will appear, independently of what store. If he wants, he can add any game to his wishlist and be notified on his Telegram about discounts.</li></p>
+							<p><li>The bot informs the user whats the current price of the game, if it is on promotion and for how much discount, in percentage.</li></p>
+							<p><li>The user is prompted if he wants to add the game to his wishlist. Each wishlist is unique to each person and they are linked by the user's telegram chat code.</li></p>
+
+							<p><li>The cluster is being held on GKE and will utilize Github Actions as a CI/CD automator.</li></p>
+							<p><li>Data is being saved on a postgreSQL database on-premise.</li></p>
+
 							<p><li>For now, the project is already streaming Steam and Epic Store data and working with Telegram bot messaging the user when a wishlist game enters in promotion.</li></p>
+							
 							<p><li>Next Steps:</li></p>
 							<style>
 								/* CSS styles for the numbered list */
@@ -70,12 +76,9 @@
 							  </style>
 							  
 							  <ol class="numbered-list">
-								<li>Save data on a KSQLDB.</li>
-								<li>Host cluster on GKE.</li>
+								<li>Save data on Cloud Storage or AWS RDS.</li>
 								<li>Implement CI/CD control to update the cluster.</li>
-								<li>Expose KSQLDB metrics and use Prometheus/Grafana to plot historical data.</li>
-								<li>Implement front-end to be more acessible for the user.</li>
-								<li>Configure Telegram bot to receive game names and insert them in the wishlist through a menu.</li>
+								<li>Expose database metrics and use Prometheus/Grafana to plot historical data.</li>
 							  </ol>
 						</div>
 					</div>
