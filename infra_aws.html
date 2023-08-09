@@ -55,18 +55,24 @@
 							<span class="image main"><img src="images/aws_infra_1.png" alt="" /></span>
 							<h1>AWS Infrastructure</h1>
 							
-							<p>In this project I used Terraform to implement a infrastructure in AWS using VPC and EC2. It creates 2 subnets for a website public IP addresses and 2 subnets for the databases without a public IP. </p>
+							<p>In this project I used Terraform to implement a infrastructure in AWS using VPC, EC2 and RDS. </p>
 							<p>It uses AWS CLI SSO configuration to authenticate to your user. Make sure to have the right permissions on IAM.</p>
 							<p>The code takes aproximately 4~5 minutes to put everything on and running.</p>
 							<h2>What the infra does:</h2>
-							<p><li>It creats automatically the port inbound and outbound permissions, configuring the security.</li></p>
-							<p><li>Creates the virtual LANs and connects them in a routing table.</li></p>
-							<p><li>You can easily configure the CIDR and the IP of the subnets on the subnets.tf file.</li></p>
-							<p><li>Also, a SNS alarm is configured to send e-mails if any of the EC2 CPUs surpass 70% usage.</li></p>
-							<p><li>To configure the alarms to other instances is pretty simple, you only have to add its instance ID to the list in alarm.tf.</li></p>
-							<p><li>The EC2 instances are created on different locations so you get redundancy:</li></p>
+							<p><li>It creates four EC2 webservers in two public subnets in two availability zones.</li></p>
 							<span class="image main"><img src="images/instances.png" alt="" /></span>
-
+							<p><li>Also creates two MySQL databases in RDS in two private subnets in two availability zones.</li></p>
+							<span class="image main"><img src="images/rds_dbs.png" alt="" /></span>
+							<span class="image main"><img src="images/subnet_db.png" alt="" /></span>
+							<p><li>It creats automatically the port inbound and outbound permissions, configuring the security.</li></p>
+							<span class="image main"><img src="images/sgroup.png" alt="" /></span>
+							<p><li>Defined a route table to grant internet access to the public subnetworks through a gateway.</li></p>
+							<span class="image main"><img src="images/gateway.png" alt="" /></span>
+							<p><li>The CIDR and the IP of the subnets can be easily configured on the subnets.tf file.</li></p>
+							<span class="image main"><img src="images/subnets.png" alt="" /></span>
+							<p><li>Also, a SNS alarm is configured to send e-mails if any of the EC2 CPUs surpass 70% usage.</li></p>
+							<span class="image main"><img src="images/snsalarm.png" alt="" /></span>
+							<p><li>To configure the alarms to other instances is pretty simple, you only have to add its instance ID to the list in alarm.tf.</li></p>
 							<p><li>The subnets are created on different available zones which are randomized so there is reliability. You can see the resource map:</li></p>
 							<span class="image main"><img src="images/resource_map.png" alt="" /></span>
 
